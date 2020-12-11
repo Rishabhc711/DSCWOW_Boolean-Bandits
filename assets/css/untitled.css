@@ -1,0 +1,10 @@
+@media (max-width: 900px) {
+  .img-fluid.visible {
+    display: none;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
