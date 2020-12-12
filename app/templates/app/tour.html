@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Tour Package</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=722a274caeb3b3381895069f1adaa626">
+    <link rel="stylesheet" href="{% static 'app/assets/bootstrap/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="/assets/css/untitled.css?h=35b0f1e48767eeb49a7f95216e2a7124">
+    <link rel="stylesheet" href="{% static 'app/assets/css/untitled.css'%}">
 </head>
 
 <body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://www.mysoretourism.org.in/images/partner-tours/up-tours-1-day-mysore-local-sightseeing-tour-by-cab.jpg');">
@@ -18,10 +18,10 @@
         <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url() no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products.html">&nbsp;visit to</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'visit' %}">&nbsp;visit to</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour</a></li>
                 </ul>
             </div>
         </div>
@@ -73,11 +73,11 @@
             <p class="m-0 small">Copyright&nbsp;©&nbsp;mysuru 2020</p>
         </div>
     </footer>
-    <script src="/assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js?h=03ab36d1dde930b7d44a712f19075641"></script>
-    <script src="/assets/js/bs-init.js?h=36ffa0191e9d112d6a97bac11fc65d8e"></script>
+    <script src="{% static 'app/assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'app/assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'app/assets/js/bs-init.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="/assets/js/current-day.js?h=3dc84de040a1e43b35c734de0f50c93d"></script>
+    <script src="{% static 'app/assets/js/current-day.js'%}"></script>
 </body>
 
 </html>

@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html style="text-align: center;">
-
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=722a274caeb3b3381895069f1adaa626">
+    <link rel="stylesheet" href="{% static 'app/assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="/assets/css/untitled.css?h=35b0f1e48767eeb49a7f95216e2a7124">
+    <link rel="stylesheet" href="{% static 'app/assets/css/untitled.css'%}">
 </head>
 
-<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url(&quot;/assets/img/red-boat-in-river.jpg?h=a733d43c1e90cbf7def540291176d723&quot;) no-repeat;background-size: auto, cover;text-align: center;max-width: 100vw;">
-    <h1 class="text-center text-white d-none d-lg-block site-heading"></h1><img class="img-fluid visible" data-aos="fade-down" data-aos-duration="900" data-aos-delay="500" src="/assets/img/Mysuru_festival_pink.png?h=4072c05d29d49d46f294dc08360def81" style="width: 500px;" loading="auto">
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url({% static 'app/assets/img/red-boat-in-river.jpg'%}) no-repeat;background-size: auto, cover;text-align: center;max-width: 100vw;">
+    <h1 class="text-center text-white d-none d-lg-block site-heading"></h1><img class="img-fluid visible" data-aos="fade-down" data-aos-duration="900" data-aos-delay="500" src="{% static 'app/assets/img/Mysuru_festival_pink.png'%}" style="width: 500px;" loading="auto">
     <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-dark py-lg-4" id="mainNav">
-        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url(&quot;/assets/img/Mysuru_festival_pink.png?h=4072c05d29d49d46f294dc08360def81&quot;) no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url("{% static 'app/assets/img/Mysuru_festival_pink.png'%}") no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products.html">&nbsp;visit to</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'visit' %}">&nbsp;visit to</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <section class="page-section clearfix">
         <div class="container">
-            <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" data-aos="slide-left" data-aos-duration="500" data-aos-delay="250" src="/assets/img/red-boat-in-river.jpg?h=a733d43c1e90cbf7def540291176d723">
+            <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" data-aos="slide-left" data-aos-duration="500" data-aos-delay="250" src="{% static 'app/assets/img/red-boat-in-river.jpg'%}">
                 <div data-aos="slide-right" data-aos-duration="600" data-aos-delay="50" class="intro-text left-0 text-centerfaded p-5 rounded bg-faded text-center">
                     <h2 class="section-heading mb-4"><span class="section-heading-upper">Planning to visit mysore?</span><span class="section-heading-lower" style="font-size: 38px;">Let's make it Worthy&nbsp;</span></h2>
                     <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!</p>
@@ -54,11 +54,11 @@
             <p class="m-0 small">Copyright&nbsp;©&nbsp;mysuru 2020</p>
         </div>
     </footer>
-    <script src="/assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js?h=03ab36d1dde930b7d44a712f19075641"></script>
-    <script src="/assets/js/bs-init.js?h=36ffa0191e9d112d6a97bac11fc65d8e"></script>
+    <script src="{% static 'app/assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'app/assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'app/assets/js/bs-init.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="/assets/js/current-day.js?h=3dc84de040a1e43b35c734de0f50c93d"></script>
+    <script src="{% static 'app/assets/js/current-day.js'%}"></script>
 </body>
 
 </html>
