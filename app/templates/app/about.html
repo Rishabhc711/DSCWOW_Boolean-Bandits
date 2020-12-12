@@ -51,6 +51,19 @@
     <script src="{% static 'app/assets/js/bs-init.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="{% static 'app/assets/js/current-day.js'%}"></script>
+    <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "62a76698-9d19-46e9-9d24-a13f2beea4bb", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "97bac48b-499c-4ed8-af5e-39fe4b990721", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 
 </html>
