@@ -13,5 +13,9 @@ def about(request):
 
 def visit(request):
     return render(request,'app/visit.html')
+
 def tour(request):
-    return render(request,'app/tour.html')    
+    return render(request,'app/tour.html')   
+
+def visual(request):
+    return render(request,'app/visualise.html')    
