@@ -81,7 +81,7 @@ Mysuru Application is design specially for Mysore. It is made under **DSC WOW HA
 ***
 
 ## **Future Adding:**
-* ### **AR/VR virtual tour**
+* ### **AR/VR virtual tour.**
 
 ***
 
