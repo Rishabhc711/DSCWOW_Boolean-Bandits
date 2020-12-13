@@ -18,4 +18,4 @@ def tour(request):
     return render(request,'app/tour.html')   
 
 def visual(request):
-    return render(request,'app/visualise.html')    
+    return render(request,'app/store.html')    

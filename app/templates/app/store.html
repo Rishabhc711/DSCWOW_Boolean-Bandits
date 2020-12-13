@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Store - Brand</title>
+    <title>Tour Package</title>
     <link rel="stylesheet" href="{% static 'app/assets/bootstrap/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
@@ -12,52 +12,59 @@
     <link rel="stylesheet" href="{% static 'app/assets/css/untitled.css'%}">
 </head>
 
-<body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url({% static 'app/assets/img/bg.jpg'%});">
-    <h1 class="text-center text-white d-none d-lg-block site-heading"><span class="text-primary site-heading-upper mb-3">A Free Bootstrap 4 Business Theme&nbsp;</span><span class="site-heading-lower">Business Casual</span></h1>
+<body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://www.mysoretourism.org.in/images/partner-tours/up-tours-1-day-mysore-local-sightseeing-tour-by-cab.jpg');">
+    <h1 class="text-center text-white d-none d-lg-block site-heading"><span class="text-primary site-heading-upper mb-3">Tour Of &nbsp;</span><span class="site-heading-lower">Mysore Palace </span></h1>
     <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-dark py-lg-4" id="mainNav">
-        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url({% static 'app/assets/img/Mysuru_festival_pink.png'%}) no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url() no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products.html">&nbsp;visit to</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'visit' %}">&nbsp;visit to</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="page-section cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <div class="cta-inner text-center rounded">
-                        <h2 class="section-heading mb-5"><span class="section-heading-upper">Come On In</span><span class="section-heading-lower">We're Open</span></h2>
-                        <ul class="list-unstyled mx-auto list-hours mb-5 text-left">
-                            <li class="d-flex list-unstyled-item list-hours-item">Sunday<span class="ml-auto">Closed</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Monday<span class="ml-auto">7:00 AM to 8:00 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Tuesday<span class="ml-auto">7:00 AM to 8:00 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Wednesday<span class="ml-auto">7:00 AM to 8:00 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Thursday<span class="ml-auto">7:00 AM to 8:00 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Friday<span class="ml-auto">7:00 AM to 8:00 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Saturday<span class="ml-auto">9:00 AM to 5:00 PM</span></li>
-                        </ul>
-                        <p class="address mb-5"><em><strong>1116 Orchard Street</strong><span><br>Golden Valley, Minnesota</span></em></p>
-                        <p class="address mb-0"><small><em>Call Anytime</em></small><span><br>(317) 585-8468</span></p>
+    <section class="page-section about-heading">
+        <div class="container"><img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="https://holidify.com/images/attr_wiki/compressed/attr_wiki_105.jpg">
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-9 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4"><span class="section-heading-upper">Beautiful Mysore</span><span class="section-heading-lower">&nbsp;About Our Palace</span></h2>
+                            <p><!-- Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
+                            <p class="mb-0"><span>We guarantee that you will fall in&nbsp;</span><em>lust</em><span>&nbsp;with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</span> -->
+                                An incredibly breathtaking example of Indo - Saracenic style of architecture, the Mysore Palace is a magnificent edifice located in Mysore in the state of Karnataka. Also known as the Amba Vilas Palace, it is the former palace of the royal family of Mysore and is still their official residence. Mysore Palace was built in the year 1912 for the 24th Ruler of the Wodeyar Dynasty and is counted amongst one of the biggest palaces in the country.</p>
+
+                                <p class="mb-0"><span>The construction of the Mysore Palace was orchestrated by the Maharaja Krishnaraja Wadiyar IV referred as "Rajarishi" (saintly king) by Mahatma Gandhi. It was then further expanded by his son and the last Maharaja of Mysore, Maharaja Jayachamaraja Wadiyar. The facade of the palace is a harmonious blend of Hindu, Muslim, Rajput and Gothic styles which imparts it a regal quality. With the Chamundi Hills towards its eastern side, the spectacle of the Mysore Palace is an enchanting sight to behold.Mysore Palace is renowned for its light & sound show and vibrant Dussehra celebrations.</span> 
+
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="page-section about-heading">
-        <div class="container"><img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="/assets/img/about.jpg?h=8faa05f2464fc6d7d7f307cf71fa2beb">
-            <div class="about-heading-content">
-                <div class="row">
-                    <div class="col-lg-10 col-xl-9 mx-auto">
-                        <div class="bg-faded rounded p-5">
-                            <h2 class="section-heading mb-4"><span class="section-heading-upper">Strong Coffee, Strong Roots</span><span class="section-heading-lower">&nbsp;About Our Cafe</span></h2>
-                            <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                            <p class="mb-0"><span>We guarantee that you will fall in&nbsp;</span><em>lust</em><span>&nbsp;with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</span></p>
-                        </div>
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-5"><span class="section-heading-upper">Come On In</span><span class="section-heading-lower">Let's have a vitual tour</span></h2>
+                        <iframe height="350px" width="100%" allowfullscreen="false" 
+                        src="https://momento360.com/e/u/1417e26d1a74442390a772fe0707e61b?utm_campaign=embed&utm_source=other&heading=-33.92&pitch=58.92&field-of-view=66&size=medium"> </iframe>
+                        <!-- <p class="address mb-5"><em><strong>1116 Orchard Street</strong><span><br>Golden Valley, Minnesota</span></em></p>
+                        <p class="address mb-0"><small><em>Call Anytime</em></small><span><br>(317) 585-8468</span></p> -->
+                    </div>
+                </div>
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-5"><span class="section-heading-upper">Covid Alert</span><span class="section-heading-lower">See the covid affected region</span></h2>
+                        <iframe height="350px" width="100%" allowfullscreen="false" 
+                        src="{% static 'app/tour.html'%}"> </iframe>
+                        <!-- <p class="address mb-5"><em><strong>1116 Orchard Street</strong><span><br>Golden Valley, Minnesota</span></em></p>
+                        <p class="address mb-0"><small><em>Call Anytime</em></small><span><br>(317) 585-8468</span></p> -->
                     </div>
                 </div>
             </div>
@@ -68,24 +75,11 @@
             <p class="m-0 small">Copyright&nbsp;©&nbsp;mysuru 2020</p>
         </div>
     </footer>
-    <script src="/assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js?h=03ab36d1dde930b7d44a712f19075641"></script>
-    <script src="/assets/js/bs-init.js?h=36ffa0191e9d112d6a97bac11fc65d8e"></script>
+    <script src="{% static 'app/assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'app/assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'app/assets/js/bs-init.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="/assets/js/current-day.js?h=3dc84de040a1e43b35c734de0f50c93d"></script>
-    <script>
-  window.watsonAssistantChatOptions = {
-      integrationID: "62a76698-9d19-46e9-9d24-a13f2beea4bb", // The ID of this integration.
-      region: "eu-gb", // The region your integration is hosted in.
-      serviceInstanceID: "97bac48b-499c-4ed8-af5e-39fe4b990721", // The ID of your service instance.
-      onLoad: function(instance) { instance.render(); }
-    };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-    document.head.appendChild(t);
-  });
-</script>
+    <script src="{% static 'app/assets/js/current-day.js'%}"></script>
 </body>
 
 </html>
