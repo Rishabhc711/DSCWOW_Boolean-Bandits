@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Tour Package</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=722a274caeb3b3381895069f1adaa626">
+    <link rel="stylesheet" href="{% static 'app/assets/bootstrap/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="/assets/css/untitled.css?h=35b0f1e48767eeb49a7f95216e2a7124">
+    <link rel="stylesheet" href="{% static 'app/assets/css/untitled.css'%}">
 </head>
 
 <body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('https://www.mysoretourism.org.in/images/partner-tours/up-tours-1-day-mysore-local-sightseeing-tour-by-cab.jpg');">
@@ -18,36 +18,14 @@
         <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url() no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products.html">&nbsp;visit to</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'visit' %}">&nbsp;visit to</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="page-section cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <div class="cta-inner text-center rounded">
-                        <h2 class="section-heading mb-5"><span class="section-heading-upper">Come On In</span><span class="section-heading-lower">We're Open</span></h2>
-                        <ul class="list-unstyled mx-auto list-hours mb-5 text-left">
-                            <li class="d-flex list-unstyled-item list-hours-item">Sunday<span class="ml-auto">Closed</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Monday<span class="ml-auto">10:00 AM to 5:30 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Tuesday<span class="ml-auto">10:00 AM to 5:30 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Wednesday<span class="ml-auto">10:00 AM to 5:30 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Thursday<span class="ml-auto">10:00 AM to 5:30 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Friday<span class="ml-auto">10:00 AM to 5:30 PM</span></li>
-                            <li class="d-flex list-unstyled-item list-hours-item">Saturday<span class="ml-auto">9:00 AM to 5:00 PM</span></li>
-                        </ul>
-                        <!-- <p class="address mb-5"><em><strong>1116 Orchard Street</strong><span><br>Golden Valley, Minnesota</span></em></p>
-                        <p class="address mb-0"><small><em>Call Anytime</em></small><span><br>(317) 585-8468</span></p> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="page-section about-heading">
         <div class="container"><img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="https://holidify.com/images/attr_wiki/compressed/attr_wiki_105.jpg">
             <div class="about-heading-content">
@@ -68,16 +46,40 @@
             </div>
         </div>
     </section>
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-5"><span class="section-heading-upper">Come On In</span><span class="section-heading-lower">Let's have a vitual tour</span></h2>
+                        <iframe height="350px" width="100%" allowfullscreen="false" 
+                        src="https://momento360.com/e/u/1417e26d1a74442390a772fe0707e61b?utm_campaign=embed&utm_source=other&heading=-33.92&pitch=58.92&field-of-view=66&size=medium"> </iframe>
+                        <!-- <p class="address mb-5"><em><strong>1116 Orchard Street</strong><span><br>Golden Valley, Minnesota</span></em></p>
+                        <p class="address mb-0"><small><em>Call Anytime</em></small><span><br>(317) 585-8468</span></p> -->
+                    </div>
+                </div>
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-5"><span class="section-heading-upper">Covid Alert</span><span class="section-heading-lower">See the covid affected region</span></h2>
+                        <iframe height="350px" width="100%" allowfullscreen="false" 
+                        src="{% static 'app/tour.html'%}"> </iframe>
+                        <!-- <p class="address mb-5"><em><strong>1116 Orchard Street</strong><span><br>Golden Valley, Minnesota</span></em></p>
+                        <p class="address mb-0"><small><em>Call Anytime</em></small><span><br>(317) 585-8468</span></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright&nbsp;©&nbsp;mysuru 2020</p>
         </div>
     </footer>
-    <script src="/assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js?h=03ab36d1dde930b7d44a712f19075641"></script>
-    <script src="/assets/js/bs-init.js?h=36ffa0191e9d112d6a97bac11fc65d8e"></script>
+    <script src="{% static 'app/assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'app/assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'app/assets/js/bs-init.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="/assets/js/current-day.js?h=3dc84de040a1e43b35c734de0f50c93d"></script>
+    <script src="{% static 'app/assets/js/current-day.js'%}"></script>
 </body>
 
 </html>

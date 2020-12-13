@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Products - Brand</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=722a274caeb3b3381895069f1adaa626">
+    <link rel="stylesheet" href="{% static 'app/assets/bootstrap/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="/assets/css/untitled.css?h=35b0f1e48767eeb49a7f95216e2a7124">
+    <link rel="stylesheet" href="{% static 'app/assets/css/untitled.css'%}">
 </head>
 
-<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url(&quot;/assets/img/things-to-do-in-mysore.jpg?h=7eaab238a626fde060d24e1ddf6726eb&quot;) repeat;background-size: auto, contain;">
-    <h1 class="text-center text-white d-none d-lg-block site-heading"><span class="text-primary site-heading-upper mb-3" data-aos="fade-right" style="font-size: 48px;text-align: center;"><img data-aos="zoom-in-left" data-aos-duration="900" data-aos-delay="250" src="/assets/img/Mysuru_festival_pink.png?h=4072c05d29d49d46f294dc08360def81" style="width: 125px;">&nbsp; Things not to miss in Mysore</span></h1>
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url({% static 'app/assets/img/things-to-do-in-mysore.jpg'%}) repeat;background-size: auto, contain;">
+    <h1 class="text-center text-white d-none d-lg-block site-heading"><span class="text-primary site-heading-upper mb-3" data-aos="fade-right" style="font-size: 48px;text-align: center;"><img data-aos="zoom-in-left" data-aos-duration="900" data-aos-delay="250" src="{% static 'app/assets/img/Mysuru_festival_pink.png'%}" style="width: 125px;">&nbsp; Things not to miss in Mysore</span></h1>
     <nav class="navbar navbar-light navbar-expand-lg sticky-top bg-dark py-lg-4" id="mainNav">
-        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url(&quot;/assets/img/Mysuru_festival_pink.png?h=4072c05d29d49d46f294dc08360def81&quot;) no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#" style="background: url({% static 'app/assets/img/Mysuru_festival_pink.png'%}) no-repeat;background-size: cover;font-size: 25px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products.html">&nbsp;visit to</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'visit' %}">&nbsp;visit to</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour</a></li>
                 </ul>
             </div>
         </div>
@@ -31,9 +31,9 @@
             <div class="product-item">
                 <div class="d-flex product-item-title">
                     <div class="d-flex mr-auto bg-faded p-5 rounded" data-aos="slide-right" data-aos-duration="500">
-                        <h2 class="section-heading mb-0"><span class="section-heading-upper">HOtel &amp; Restaurant</span><span class="section-heading-lower">Mysore Palace</span></h2>
+                        <h2 class="section-heading mb-0"><span class="section-heading-upper">HOtel &amp; Restaurant</span><span class="section-heading-lower"><a href="{% url 'visual' %}">Mysore Palace<a/></span></h2>
                     </div>
-                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" data-aos="slide-left" data-aos-duration="500" src="/assets/img/1_5455_02.jpg?h=c2adce119e98ff09e38f18bc4fe7aa4b">
+                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" data-aos="slide-left" data-aos-duration="500" src="{% static 'app/assets/img/1_5455_02.jpg'%}">
                 <div data-aos="slide-right" data-aos-duration="500" class="bg-faded p-5 rounded">
                     <p class="mb-0" style="text-align: left;">This should be the first thing you do in Mysore, unless it’s a weekend in which case do anything OTHER than the palace tour. Saturday was packed full, especially because it was a holiday while I was there. Mysore was a place of royals and up until a month of so ago had a king of it’s own (but he’s passed away with no heir thanks to the <a href="https://hippie-inheels.com/day-trips-mysore/"><span style="text-decoration: underline;">Mysore Cure in Talakad</span></a><span style="text-decoration: underline;">.</span></p>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="d-flex ml-auto bg-faded p-5 rounded" data-aos="slide-left" data-aos-duration="500">
                         <h2 class="section-heading mb-0"><span class="section-heading-upper">Cultural &amp; Historical Palace</span><span class="section-heading-lower">Mysore Palace</span></h2>
                     </div>
-                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" data-aos="slide-right" data-aos-duration="500" src="/assets/img/best-night-places-at-mysore-1280x720.jpg?h=a2f9611e880807cc239003adc0750845">
+                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" data-aos="slide-right" data-aos-duration="500" src="{% static 'app/assets/img/best-night-places-at-mysore-1280x720.jpg'%}">
                 <div data-aos="slide-left" data-aos-duration="500" class="bg-faded p-5 rounded">
                     <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
                 </div>
@@ -61,7 +61,7 @@
                     <div class="d-flex mx-auto bg-faded p-5 rounded" data-aos="fade-up" data-aos-duration="500">
                         <h2 class="section-heading mb-0"><span class="section-heading-upper">Historical &amp; cultural palace</span><span class="section-heading-lower">snow city</span></h2>
                     </div>
-                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" data-aos="fade-up" data-aos-duration="500" src="/assets/img/snow-city-theme-park-nazarbad-mysore-tourist-attraction-bwxtv9gl59.webp?h=229aa23e8c27af6988208530a04b9aea">
+                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" data-aos="fade-up" data-aos-duration="500" src="{% static 'app/assets/img/snow-city-theme-park-nazarbad-mysore-tourist-attraction-bwxtv9gl59.webp'%}">
                 <div data-aos="fade-down" data-aos-duration="500" class="bg-faded p-5 rounded">
                     <p class="mb-0">SnowCity is Mysore's first snow and ice park spread across 10000 square feet.&nbsp;With a facade that looks like Moscow's Kremlin and many fun activities, it's a place to cool down and get adventurous! Enjoy the eco-friendly snow while exploring Ice House, Snow Hotel, the colour-changing igloos and several fun rides like&nbsp;Snow Disc, Ice Slide, Snowball Throwing, Snow Bike, and Snow Mountaineering.&nbsp;Don't miss out on the 15 minutes of fun disco session with groovy tunes and disco lights!</p>
                 </div>
@@ -73,11 +73,24 @@
             <p class="m-0 small">Copyright&nbsp;©&nbsp;mysuru 2020</p>
         </div>
     </footer>
-    <script src="/assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js?h=03ab36d1dde930b7d44a712f19075641"></script>
-    <script src="/assets/js/bs-init.js?h=36ffa0191e9d112d6a97bac11fc65d8e"></script>
+    <script src="{% static  'app/assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'app/assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'app/assets/js/bs-init.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="/assets/js/current-day.js?h=3dc84de040a1e43b35c734de0f50c93d"></script>
+    <script src="{% static 'app/assets/js/current-day.js'%}"></script>
+    <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "62a76698-9d19-46e9-9d24-a13f2beea4bb", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "97bac48b-499c-4ed8-af5e-39fe4b990721", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 
 </html>
