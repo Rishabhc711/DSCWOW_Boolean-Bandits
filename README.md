@@ -5,7 +5,7 @@
 <h1 style="text-align:center;color:#F2CA25">Team: <span style="color:white">Boolean Bandits </span></h1>
 
 <br/>
-
+Here is a link to our Slides Presentation: https://docs.google.com/presentation/d/1qzqAM1F67dW3OdJR_5ZKCu8kYmC_jTOkwgEZLxZiA5c/edit?usp=sharing
 
 Mysuru Application is design specially for Mysore. It is made under **DSC WOW HACKATHON**. It is made to promote and provide functionality to the Tourism with one stop support.
 
