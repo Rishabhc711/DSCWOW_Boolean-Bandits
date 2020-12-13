@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circles</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCprTLVZODcXFA5S-7woiLYbpB4zojMdSI&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+    <script>
+    
+        $(function() {
+    
+    
+       var people = [];
+    
+       $.getJSON('fulliam.json', function(data) {
+           $.each(data.places, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.name + "</td>" +
+               "<td>" + f.address + "</td>" + "<td>" + f.coordinates + "</td>" + "<td>" + f.rating + "</td>" + "<td>" + f.rating_n + "</td>" + "</tr>"
+               $(tblRow).appendTo("#userdata tbody");
+         });
+    
+       });
+    
+    });
+    </script>
+    <script>
+      const places = {
+    "mysore_palce":{
+    "id": "ChIJhcmpnp5xrzsRUtAV0Jqb108",
+    "name": "Mysore Palace",
+    "address": "Mysore Palace, Agrahara, Chamrajpura, Mysuru, Karnataka 570004, India",
+    "types": [
+        "point_of_interest",
+        "establishment"
+    ],
+    "coordinates": {
+        "lat": 12.3050888,
+        "lng": 76.6540859
+    },
+    "rating": 4.6,
+    "rating_n": 167784,
+    "populartimes": [
+        {
+            "name": "Monday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                38,
+                51,
+                62,
+                69,
+                69,
+                63,
+                56,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Tuesday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                41,
+                50,
+                58,
+                64,
+                67,
+                67,
+                64,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Wednesday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                42,
+                52,
+                59,
+                62,
+                63,
+                63,
+                61,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Thursday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                41,
+                50,
+                57,
+                62,
+                65,
+                66,
+                64,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Friday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                44,
+                59,
+                69,
+                74,
+                71,
+                64,
+                61,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Saturday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                57,
+                70,
+                82,
+                91,
+                97,
+                100,
+                97,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Sunday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                53,
+                73,
+                90,
+                96,
+                88,
+                72,
+                62,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "time_spent": [
+        60,
+        60
+    ]
+},
+"Mysore_townhall":
+{
+    "id": "ChIJtzjxRxJwrzsRHgPSjOVPCm0",
+    "name": "Mysore Town Hall",
+    "address": "Ashoka Rd, opp. Dodda Gadiyara, Devaraja Mohalla, Mandi Mohalla, Mysuru, Karnataka 570001, India",
+    "types": [
+        "city_hall",
+        "local_government_office",
+        "point_of_interest",
+        "establishment"
+    ],
+    "coordinates": {
+        "lat": 12.3097933,
+        "lng": 76.65586809999999
+    },
+    "rating": 4.3,
+    "rating_n": 44,
+    "current_popularity": 7,
+    "populartimes": [
+        {
+            "name": "Monday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                18,
+                44,
+                72,
+                83,
+                74,
+                59,
+                54,
+                56,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Tuesday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                27,
+                51,
+                77,
+                91,
+                89,
+                78,
+                70,
+                67,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Wednesday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                22,
+                47,
+                75,
+                90,
+                84,
+                70,
+                64,
+                69,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Thursday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                31,
+                59,
+                86,
+                100,
+                96,
+                84,
+                77,
+                74,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Friday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                26,
+                53,
+                82,
+                97,
+                91,
+                76,
+                67,
+                69,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Saturday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                22,
+                42,
+                64,
+                79,
+                79,
+                69,
+                60,
+                57,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "name": "Sunday",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                7,
+                18,
+                33,
+                43,
+                44,
+                36,
+                26,
+                19,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "time_spent": [
+        20,
+        60
+    ]
+},
+"Chikka_gadiyara": 
+{
+    "id": "ChIJD5h-jA1wrzsRFXd1CmJex7s",
+    "name": "Chikka Gadiyara",
+    "address": "1525, Vinoba Rd, Devaraja Mohalla, Shivarampet, Mysuru, Karnataka 570001, India",
+    "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+    ],
+    "coordinates": {
+        "lat": 12.3095142,
+        "lng": 76.65241329999999
+    },
+    "rating": 4.4,
+    "rating_n": 1454,
+    "current_popularity": 33,
+    "populartimes": [
+        {
+            "name": "Monday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                14,
+                18,
+                8,
+                9,
+                25,
+                47,
+                68,
+                79,
+                74,
+                61,
+                49,
+                48,
+                55,
+                58,
+                51,
+                33,
+                14,
+                0,
+                1
+            ]
+        },
+        {
+            "name": "Tuesday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                7,
+                13,
+                18,
+                24,
+                34,
+                50,
+                69,
+                82,
+                81,
+                69,
+                57,
+                56,
+                67,
+                75,
+                66,
+                42,
+                16,
+                0,
+                1
+            ]
+        },
+        {
+            "name": "Wednesday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                19,
+                23,
+                14,
+                14,
+                30,
+                52,
+                70,
+                77,
+                72,
+                60,
+                53,
+                54,
+                62,
+                66,
+                60,
+                44,
+                25,
+                8,
+                1
+            ]
+        },
+        {
+            "name": "Thursday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                3,
+                21,
+                24,
+                12,
+                12,
+                28,
+                50,
+                71,
+                80,
+                78,
+                69,
+                63,
+                66,
+                72,
+                73,
+                64,
+                46,
+                25,
+                8,
+                1
+            ]
+        },
+        {
+            "name": "Friday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                27,
+                23,
+                12,
+                22,
+                38,
+                54,
+                67,
+                73,
+                73,
+                70,
+                69,
+                75,
+                85,
+                90,
+                79,
+                55,
+                28,
+                7,
+                1
+            ]
+        },
+        {
+            "name": "Saturday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                7,
+                33,
+                36,
+                17,
+                14,
+                31,
+                58,
+                84,
+                100,
+                99,
+                87,
+                75,
+                74,
+                85,
+                93,
+                85,
+                61,
+                32,
+                9,
+                1
+            ]
+        },
+        {
+            "name": "Sunday",
+            "data": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                20,
+                27,
+                16,
+                19,
+                37,
+                58,
+                74,
+                80,
+                73,
+                60,
+                48,
+                44,
+                46,
+                46,
+                38,
+                24,
+                10,
+                1,
+                1
+            ]
+        }
+    ],
+    "time_spent": [
+        45,
+        45
+    ]
+}
+};
+
+
+      function initMap() {
+        // Create the map.
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 16,
+          center: { lat: 12.3052, lng: 76.6552 },
+          mapTypeId: "terrain",
+        });
+
+        // Construct the circle for each value in citymap.
+        // Note: We scale the area of the circle based on the population.
+        for (const place in places) {
+          
+          const cityCircle = new google.maps.Circle({
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35,
+            map,
+            center: places[place]["coordinates"],
+            radius: Math.sqrt(places[place]["populartimes"][6]['data'][12]+10) * 20,
+          });
+        }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+    
+        
+  </body>
+</html>
