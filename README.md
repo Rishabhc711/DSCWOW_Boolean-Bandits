@@ -85,6 +85,19 @@ Mysuru Application is design specially for Mysore. It is made under **DSC WOW HA
 
 ***
 
+# How to run project:
+
+**1- Clone the Repository**
+
+**2- Head to the Root Folder**
+```
+cd DSCWOW_Mysuru
+```
+
+**3- Run the Following Command**
+```
+python manage.py runserver
+```
 
 
 
